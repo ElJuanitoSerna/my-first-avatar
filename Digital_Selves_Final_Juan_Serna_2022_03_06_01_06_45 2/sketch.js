@@ -1,4 +1,4 @@
-'use strict'
+
 let eyebrowMove;
 let micVar;
 let mic;
@@ -29,7 +29,7 @@ function draw() {
   console.log("mouse y is:"+ mouseY)
   myMap = map(mouseX, 0, width, 50,90)
   console.log(myMap)
-  
+
   if(mouseX > 85 && mouseX < 350) {
     raiseEyebrow = 1;
   } else {
@@ -43,7 +43,7 @@ function draw() {
       image(img,0,0);
   });
   }
-  
+
 
   console.log(lowerEyebrow);
   console.log(raiseEyebrow);
@@ -63,11 +63,11 @@ function draw() {
   rightCheek();
   movingMouth();
   fill(2)
-  
+
 }
   function movingObjects()
-{  
-   
+{
+
 fill(255)
   circle(moveX, width*0.002,width*0.4,width*0.2);
 
@@ -85,11 +85,11 @@ fill(255)
    moveX++;
  }
 }
-  
+
   function leftCheek (){
   strokeWeight(5)
   fill(255)
-  
+
   rect( width * 0.1,width * 0.480,width * 0.2,width * .2,width * 0.,width *       0.9,width * 0.,width * 0.1);
   }
 
@@ -97,13 +97,13 @@ fill(255)
     strokeWeight(5)
   fill(255)
   rect( width * .52,width * 0.480,width * 0.180,width * .2,width * 0.2,width *   0.,width * 0.6,width * 0.);
-    
-    
+
+
   }
 
   function rightEye () {
 
-  
+
   fill(215, 222, 126);
   circle(width * 0.28, width * 0.37, width * 0.12, );
   //pupil
@@ -113,18 +113,18 @@ fill(255)
   }
 
 //mouth
-function bigSmile (){   
+function bigSmile (){
   push();
   fill(255, 255, 255);
-  
+
   rect( width * 0.31,width * 0.56,width * 0.20,width * 0.21,width * 0.0,width *   0.0,width * 0.1,width * 0.1);
-   
+
   //rect(width *0.36 , width *0.56, width *0.11, width *0.1);
   fill(255, 255, 255);
   pop();
 }
 
-function movingMouth (){    
+function movingMouth (){
   var vol = mic.getLevel();
   push();
   fill(2);
@@ -134,9 +134,9 @@ function movingMouth (){
 }
 
 
-function smallSmile (){   
+function smallSmile (){
   push();
-  fill(255, 0, 255, 10); 
+  fill(255, 0, 255, 10);
   rect( width * 0.36,width * 0.56,width * 0.10,width * 0.1,width *       0.0,width * 0.0,width * 0.1,width * 0.1);
   fill(255, 255, 255);
   pop()
@@ -162,7 +162,7 @@ function eyebrowRight (){
   if (raiseEyebrow == 0){
   rect( width * 0.44,width * 0.265,width * 0.2,width * .0999,width *0.31,width *0.,width * 0.8 ,width * 0.);
   }
-  
+
   else if (raiseEyebrow == 1){
   rect( width * 0.44,width * 0.259,width * 0.2,width * .0999,width *0.31,width *0.,width * 0.8 ,width * 0.);
   fill(255, 255, 255);
@@ -182,7 +182,7 @@ function eyeBallRight(){
   beginShape();
   push();
   fill(255, 255, 255);
-  rect( width * 0.44,width * 0.27,width * 0.20,width * 0.2,width *             
+  rect( width * 0.44,width * 0.27,width * 0.20,width * 0.2,width *
   0.10,width * 0.01,width * 0.1,width * 0.3);
   fill(215, 255, 255);
   pop(),
@@ -200,7 +200,7 @@ function bottomLip() {
 function leftEar (){
   beginShape()
   fill(224,141,60)
-  ellipse(width * 0.18, width * 0.2, width * 0.18, width * 0.28); 
+  ellipse(width * 0.18, width * 0.2, width * 0.18, width * 0.28);
   fill(255,128,128)
   ellipse(width * 0.2, width * 0.22, width * 0.14, width * 0.20);
   noStroke();
@@ -227,11 +227,11 @@ function leftEye () {
   circle(width * 0.56, width * 0.38, width * 0.06);
 }
 
-function rightEar () { 
-//right ear 
+function rightEar () {
+//right ear
   stroke(2)
   fill(224,141,60)
-  ellipse(width * 0.60, width * 0.2, width * 0.18, width * 0.28); 
+  ellipse(width * 0.60, width * 0.2, width * 0.18, width * 0.28);
   fill(255,128,128)
   ellipse(width * 0.60, width * 0.22, width * 0.14, width * 0.20);
 }
@@ -257,4 +257,3 @@ function nose (){
   endShape(CLOSE)
 
 }
-  
